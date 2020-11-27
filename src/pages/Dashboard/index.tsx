@@ -1,9 +1,10 @@
 import React, { useState, useEffect, FormEvent } from "react";
-import logoImg from "../../assets/logo.svg";
 import { Title, Form, Error, Repositories } from "./styles";
 import { FiChevronRight } from "react-icons/fi";
 import { Link } from "react-router-dom";
 import api from "../../services/api";
+
+import logoImg from "../../assets/logo.svg";
 
 interface Repository {
   full_name: string;
@@ -69,7 +70,7 @@ const Dashboard: React.FC = () => {
         <input
           value={newRepo}
           onChange={(e) => setNewRepo(e.target.value)}
-          placeholder="Digite o nome do repositório"
+          placeholder="Digite o nome do repositório (ex.: facebook/react)"
         />
         <button type="submit">Pesquisar</button>
       </Form>
